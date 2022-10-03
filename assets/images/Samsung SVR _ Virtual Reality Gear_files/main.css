@@ -1,0 +1,891 @@
+#sidebar {
+  display: none;
+  position: fixed;
+  background: #040404;
+  top: 75px;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-transition: all .5 ease-in;
+  transition: all .5 ease-in;
+  z-index: 10;
+}
+
+#sidebar .menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: center;
+}
+
+#sidebar .menu li {
+  list-style-type: none;
+}
+
+#sidebar .menu li a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+}
+
+#sidebar .menu .cta {
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+#sidebar .menu .cta:hover {
+  color: #040404;
+  background: #fff;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-in;
+  -webkit-animation: slideIn 0.5s ease-in;
+}
+
+.slide-out {
+  animation: slideOut 0.5s ease-out;
+  -webkit-animation: slideOut 0.5s ease-out;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
+    background: #040404;
+  }
+  25% {
+    -webkit-transform: translate(-50px, 0);
+            transform: translate(-50px, 0);
+    background: #fff;
+    opacity: .8;
+  }
+  50% {
+    -webkit-transform: translate(-20px, 0);
+            transform: translate(-20px, 0);
+    background: #fff;
+    opacity: .8;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    background: #040404;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
+    background: #040404;
+  }
+  25% {
+    -webkit-transform: translate(-50px, 0);
+            transform: translate(-50px, 0);
+    background: #fff;
+    opacity: .8;
+  }
+  50% {
+    -webkit-transform: translate(-20px, 0);
+            transform: translate(-20px, 0);
+    background: #fff;
+    opacity: .8;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    background: #040404;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  0% {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+    background: #fff;
+  }
+  25% {
+    -webkit-transform: translate(50px, 0);
+            transform: translate(50px, 0);
+    background: #fff;
+  }
+  50% {
+    -webkit-transform: translate(-50px, 0);
+            transform: translate(-50px, 0);
+    background: #040404;
+  }
+  100% {
+    -webkit-transform: translate(-300px, 0);
+            transform: translate(-300px, 0);
+    background: #040404;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+    background: #fff;
+  }
+  25% {
+    -webkit-transform: translate(50px, 0);
+            transform: translate(50px, 0);
+    background: #fff;
+  }
+  50% {
+    -webkit-transform: translate(-50px, 0);
+            transform: translate(-50px, 0);
+    background: #040404;
+  }
+  100% {
+    -webkit-transform: translate(-300px, 0);
+            transform: translate(-300px, 0);
+    background: #040404;
+  }
+}
+
+.landing {
+  background-image: url("../images/svr-landing.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  height: 80vh;
+}
+
+.landing .content {
+  position: absolute;
+  left: 82px;
+  bottom: 120px;
+  text-align: center;
+}
+
+.landing .content h1 {
+  font-family: DINPro-Bold, sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.landing .content p {
+  font-family: DINPro-Light, sans-serif;
+  line-height: .5;
+}
+
+.landing .content .cta {
+  cursor: pointer;
+}
+
+.features {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin: 10px;
+}
+
+.slider-container .slider-content {
+  text-align: center;
+}
+
+.control .content, .revolution .content {
+  margin: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+footer {
+  padding: 10px 20px;
+}
+
+footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer nav .logo {
+  width: 80px;
+}
+
+footer nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer nav .menu li a {
+  color: #fff;
+  margin-right: 10px;
+}
+
+footer nav .menu li a:hover {
+  color: gray;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+footer nav .menu .cta {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #sidebar {
+    display: none;
+  }
+  .landing {
+    background-image: url("../images/svr-landing.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 40px;
+    height: 60vh;
+    position: relative;
+  }
+  .landing .content {
+    position: absolute;
+    left: 0;
+    bottom: 150px;
+    text-align: left;
+  }
+  .landing .content .h1-container h1 {
+    font-family: DINPro-Bold, sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+  }
+  .landing .content .p-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .landing .content .p-container p {
+    font-family: DINPro-Light, sans-serif;
+    line-height: .5;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+  }
+  .landing .content .cta {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 15px 30px;
+  }
+  .landing .content .cta:hover {
+    color: #040404;
+    background: #fff;
+  }
+  .features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+    margin: 20px;
+  }
+  .features .content h3 {
+    font-size: 2rem;
+    font-family: DINPro-Medium, sans-serif;
+    letter-spacing: 2px;
+  }
+  .features .content p {
+    letter-spacing: 2px;
+    font-family: DINPro-Light, sans-serif;
+  }
+  .slider-container {
+    margin: 10px;
+  }
+  .slider-container .slider-content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .slider-container .slider-content h2 {
+    font-size: 2.5rem;
+  }
+  .slider-container .slider-content p {
+    font-family: DINPro-Light, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+  }
+  .slider-container .slider div img {
+    -webkit-transition: all 4s ease-in;
+    transition: all 4s ease-in;
+  }
+  .control {
+    background-image: url("../images/svr-hand.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+  }
+  .control .content {
+    position: absolute;
+    left: 0;
+    top: 150px;
+    width: 40%;
+    margin-left: 40px;
+  }
+  .control .content h3 {
+    font-size: 2rem;
+  }
+  .control .content p {
+    font-family: DINPro-Light, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.8px;
+  }
+  .control .content .cta {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+  }
+  .control .content .cta:hover {
+    color: #040404;
+    background: #fff;
+  }
+  .revolution .content {
+    margin: 20px;
+  }
+  .revolution .content h3 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  footer {
+    margin: 40px 60px;
+  }
+  footer nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+  }
+  footer nav .logo {
+    width: 80px;
+  }
+  footer nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+  }
+  footer nav .menu li {
+    list-style-type: none;
+    margin-right: 20px;
+  }
+  footer nav .menu li a {
+    display: inline-block;
+    color: #fff;
+  }
+  footer nav .menu .cta {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+  }
+  footer nav .menu .cta:hover {
+    color: #040404;
+    background: #fff;
+  }
+}
+
+@media (min-width: 1200px) {
+  #sidebar {
+    display: none;
+  }
+  .landing {
+    background-image: url("../images/svr-landing.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 40px;
+    height: 60vh;
+    position: relative;
+  }
+  .landing .content {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    text-align: left;
+  }
+  .landing .content .h1-container h1 {
+    font-family: DINPro-Bold, sans-serif;
+    font-size: 6rem;
+    line-height: 1;
+  }
+  .landing .content .p-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .landing .content .p-container p {
+    font-family: DINPro-Light, sans-serif;
+    line-height: .5;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+  }
+  .landing .content .cta {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 15px 30px;
+  }
+  .landing .content .cta:hover {
+    color: #040404;
+    background: #fff;
+  }
+  .features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+    margin: 40px;
+  }
+  .features .content h3 {
+    font-size: 2rem;
+    font-family: DINPro-Medium, sans-serif;
+    letter-spacing: 2px;
+  }
+  .features .content p {
+    letter-spacing: 2px;
+    font-family: DINPro-Light, sans-serif;
+  }
+  .slider-container {
+    margin: 40px;
+  }
+  .slider-container .slider-content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .slider-container .slider-content h2 {
+    font-size: 2.5rem;
+  }
+  .slider-container .slider-content p {
+    font-family: DINPro-Light, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+  }
+  .slider-container .slider div img {
+    -webkit-transition: all 4s ease-in;
+    transition: all 4s ease-in;
+  }
+  .control {
+    background-image: url("../images/svr-hand.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+  }
+  .control .content {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    width: 32%;
+    margin-left: 40px;
+    margin-bottom: 40px;
+  }
+  .control .content h3 {
+    font-size: 2.5rem;
+  }
+  .control .content p {
+    font-family: DINPro-Light, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.8px;
+  }
+  .control .content .cta {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+  }
+  .control .content .cta:hover {
+    color: #040404;
+    background: #fff;
+  }
+  .revolution .content {
+    margin: 20px;
+  }
+  .revolution .content h3 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  footer {
+    margin: 40px 60px;
+  }
+  footer nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+  }
+  footer nav .logo {
+    width: 80px;
+  }
+  footer nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+  }
+  footer nav .menu li {
+    list-style-type: none;
+    margin-right: 20px;
+  }
+  footer nav .menu li a {
+    display: inline-block;
+    color: #fff;
+  }
+  footer nav .menu .cta {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+  }
+  footer nav .menu .cta:hover {
+    color: #040404;
+    background: #fff;
+  }
+}
+
+@media (min-width: 1301px) {
+  .landing {
+    background-image: url("../images/svr-landing.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    margin: 40px 80px;
+    height: 100vh;
+    position: relative;
+  }
+  .landing .content {
+    position: absolute;
+    left: 0;
+    bottom: 200px;
+  }
+  .landing .content h1 {
+    font-family: DINPro-Bold, sans-serif;
+    font-size: 5rem;
+    line-height: 1;
+  }
+  .landing .content p {
+    font-family: DINPro-Light, sans-serif;
+    line-height: .5;
+  }
+  .control {
+    background-image: url("../images/svr-hand.jpg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+  }
+  .control .content {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 32%;
+    margin-left: 40px;
+  }
+  .control .content h3 {
+    font-size: 2.5rem;
+  }
+  .control .content p {
+    font-family: DINPro-Light, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.8px;
+  }
+  .control .content .cta {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+  }
+  .control .content .cta:hover {
+    color: #040404;
+    background: #fff;
+  }
+}
+
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  place-items: center;
+  padding: 20px;
+}
+
+.header nav .logo {
+  width: 100px;
+}
+
+.header nav .menu {
+  display: none;
+}
+
+.header nav .menu-bar {
+  display: block;
+}
+
+.header nav .menu-bar .line {
+  width: 40px;
+  background-color: #fff;
+  height: 3px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+.header nav .cancel {
+  display: block;
+}
+
+.header nav .cancel .line {
+  width: 30px;
+  background-color: #fff;
+  height: 3px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.header nav .cancel .line:first-child {
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+  margin-bottom: 2px;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+.header nav .cancel .line:nth-child(2) {
+  visibility: hidden;
+  -webkit-transform: translate(-200px);
+          transform: translate(-200px);
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+.header nav .cancel .line:last-child {
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  margin-top: -13px;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin: 0 20px;
+  }
+  .header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+    padding: 20px 40px;
+  }
+  .header nav .logo {
+    width: 100px;
+  }
+  .header nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header nav .menu li {
+    list-style-type: none;
+  }
+  .header nav .menu li a {
+    padding: 10px;
+    margin-right: 10px;
+    color: #fff;
+  }
+  .header nav .menu li a:hover {
+    color: gray;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+  }
+  .header nav .menu-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    margin: 0 20px;
+  }
+  .header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+    padding: 20px 40px;
+  }
+  .header nav .logo {
+    width: 100px;
+  }
+  .header nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header nav .menu li {
+    list-style-type: none;
+  }
+  .header nav .menu li a {
+    padding: 10px;
+    margin-right: 10px;
+    color: #fff;
+  }
+  .header nav .menu-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 1301px) {
+  .header {
+    margin: 0 50px;
+  }
+  .header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+    padding: 40px;
+  }
+  .header nav .logo {
+    width: 100px;
+  }
+  .header nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header nav .menu li {
+    list-style-type: none;
+  }
+  .header nav .menu li a {
+    padding: 10px;
+    margin-right: 10px;
+    color: #fff;
+  }
+  .header nav .menu-bar {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: DINPro-Light;
+  src: url("../fonts/DINPro-Light.otf");
+}
+
+@font-face {
+  font-family: DINPro-Regular;
+  src: url("../fonts/DINPro-Regular.otf");
+}
+
+@font-face {
+  font-family: DINPro-Bold;
+  src: url("../fonts/DINPro-Bold.otf");
+}
+
+@font-face {
+  font-family: DINPro-Medium;
+  src: url("../fonts/DINPro-Medium.otf");
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #040404;
+  color: #fff;
+  font-family: DINPro-Regular, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, ul, li, a, section, div {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+li {
+  list-style-type: none;
+}
+
+.cta {
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 15px 30px;
+}
+
+.cta:hover {
+  color: #040404;
+  background: #fff;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+/*# sourceMappingURL=main.css.map */
